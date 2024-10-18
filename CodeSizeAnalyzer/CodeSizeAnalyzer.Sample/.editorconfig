@@ -1,0 +1,7 @@
+﻿
+root = true
+
+[*.cs]
+dotnet_diagnostic.code_length.max_method_lines = 22
+dotnet_diagnostic.code_length.max_class_lines = 222
+
