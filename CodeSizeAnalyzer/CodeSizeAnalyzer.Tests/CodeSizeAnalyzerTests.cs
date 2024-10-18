@@ -59,9 +59,7 @@ public class CodeSizeAnalyzerTests
             .WithLocation(3, 17)
             .WithArguments(["MyLongMethod", "MyLongClass"]);
         
-        await Verifier
-            .VerifyAnalyzerAsync(text, expected)
-            .ConfigureAwait(false);
+        await Verifier.VerifyAnalyzerAsync(text, expected);
     }
 
     [Fact]
@@ -108,9 +106,7 @@ public class CodeSizeAnalyzerTests
             .WithLocation(1, 14)
             .WithArguments(["MyLongClass"]);
         
-        await Verifier
-            .VerifyAnalyzerAsync(classText, expected)
-            .ConfigureAwait(false);
+        await Verifier.VerifyAnalyzerAsync(classText, expected);
     }
 
 }
