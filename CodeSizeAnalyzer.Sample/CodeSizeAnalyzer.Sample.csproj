@@ -6,15 +6,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\CodeSizeAnalyzer\CodeSizeAnalyzer.csproj"
-                          OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove=".editorconfig" />
       <Content Include=".editorconfig">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CodeSizeAnalyzer\CodeSizeAnalyzer.csproj"
+                          OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
 </Project>

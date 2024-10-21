@@ -1,6 +1,7 @@
 ﻿// ReSharper disable UnusedMember.Global
 namespace CodeSizeAnalyzer.Sample;
 
+// ReSharper disable once UnusedType.Global
 public class TooLongClass
 {
     private int _x;

@@ -2,16 +2,24 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <IsPackable>true</IsPackable>
+        <PackAsTool>true</PackAsTool>
         <Nullable>enable</Nullable>
-        <LangVersion>latest</LangVersion>
+        <LangVersion>12</LangVersion>
 
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <IsRoslynComponent>true</IsRoslynComponent>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>Roslyn Analyzer to warn about too large code elements</Title>
-        <Description>Roslyn Analyzer to warn about too large classes and methods.</Description>
         <Copyright>ICT Baden GmbH</Copyright>
+        <Authors>Frank Pfattheicher</Authors>
+        <Description>Roslyn Analyzer to warn about too large classes and methods.</Description>
+
+        <PackageLicenseUrl>MIT</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/FrankPfattheicher/IctBaden.CodeSizeAnalyzer</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/FrankPfattheicher/IctBaden.CodeSizeAnalyzer</RepositoryUrl>
+        <RepositoryType>GIT</RepositoryType>
+        <PackageTags>roslyn analyzer</PackageTags>
+        <PackageReleaseNotes>First release</PackageReleaseNotes>
+        
     </PropertyGroup>
 
     <ItemGroup>
@@ -39,6 +47,13 @@
 
     <ItemGroup>
       <None Remove=".editorconfig" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="readme.txt">
+          <Pack>true</Pack>
+          <PackagePath>\</PackagePath>
+      </Content>
     </ItemGroup>
 
 </Project>

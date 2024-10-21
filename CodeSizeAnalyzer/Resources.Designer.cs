@@ -60,65 +60,38 @@ namespace CodeSizeAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type names should not contain the company name..
+        ///   Looks up a localized string similar to Classes should not be longer than N lines.
         /// </summary>
-        internal static string AB0001Description {
+        internal static string ClassTooLongDescription {
             get {
-                return ResourceManager.GetString("AB0001Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type name &apos;{0}&apos; contains the company name.
-        /// </summary>
-        internal static string AB0001MessageFormat {
-            get {
-                return ResourceManager.GetString("AB0001MessageFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type name contains the company name.
-        /// </summary>
-        internal static string AB0001Title {
-            get {
-                return ResourceManager.GetString("AB0001Title", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The speed must be lower than the Speed of Light..
-        /// </summary>
-        internal static string AB0002Description {
-            get {
-                return ResourceManager.GetString("AB0002Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The specified speed &apos;{0}&apos; must be lower than the Speed of Light.
-        /// </summary>
-        internal static string AB0002MessageFormat {
-            get {
-                return ResourceManager.GetString("AB0002MessageFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Methods should not be longer than N lines.
-        /// </summary>
-        internal static string SS0001MethodSizeTitle {
-            get {
-                return ResourceManager.GetString("SS0001MethodSizeTitle", resourceCulture);
+                return ResourceManager.GetString("ClassTooLongDescription", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Classes should not be longer than N lines.
         /// </summary>
-        internal static string SS0002ClassSizeTitle {
+        internal static string ClassTooLongTitle {
             get {
-                return ResourceManager.GetString("SS0002ClassSizeTitle", resourceCulture);
+                return ResourceManager.GetString("ClassTooLongTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Methods should not be longer than N lines.
+        /// </summary>
+        internal static string MethodTooLongDescription {
+            get {
+                return ResourceManager.GetString("MethodTooLongDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Methods should not be longer than N lines.
+        /// </summary>
+        internal static string MethodTooLongTitle {
+            get {
+                return ResourceManager.GetString("MethodTooLongTitle", resourceCulture);
             }
         }
     }
