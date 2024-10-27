@@ -3,6 +3,6 @@
 ### New Rules
 
 | Rule ID | Category | Severity | Notes                                      |
-|-------------------|----------|----------|--------------------------------------------|
-| MethodTooLong | Usage    | Warning  | Methods should not be longer than N lines. |
-| ClassTooLong  | Usage    | Warning  | Classes should not be longer than N lines. |
+|---------|----------|----------|--------------------------------------------|
+| CSA2001 | Usage    | Warning  | Classes should not be longer than N lines. |
+| CSA2002 | Usage    | Warning  | Methods should not be longer than N lines. |

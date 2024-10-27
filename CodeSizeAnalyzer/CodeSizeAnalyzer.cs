@@ -13,31 +13,34 @@ public class CodeSizeAnalyzer : DiagnosticAnalyzer
     private static int _maxMethodLines = 30;
 
     private static DiagnosticDescriptor ClassTooLongRule => new(
-        "ClassTooLongRule",
+        "CSA2001",
         "Class is too long",
-        $"Class {0} exceeds the maximum accepted length ({_maxClassLines} lines)",
+        "Class {0} exceeds the maximum accepted length (_maxClassLines lines)"
+            .Replace(nameof(_maxClassLines), _maxClassLines.ToString()),
         "Design",
         DiagnosticSeverity.Warning,
         isEnabledByDefault: true);
 
     private static DiagnosticDescriptor MethodTooLongRule => new(
-        "MethodTooLongRule",
+        "CSA2002",
         "Method is too long",
-        $"Method {0} in class {1} exceeds the maximum accepted length ({_maxMethodLines} lines)",
+        "Method {0} in class {1} exceeds the maximum accepted length (_maxMethodLines lines)"
+            .Replace(nameof(_maxMethodLines), _maxMethodLines.ToString()),
         "Design",
         DiagnosticSeverity.Warning,
         isEnabledByDefault: true);
 
-    public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(ClassTooLongRule, MethodTooLongRule);
+    public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => [ClassTooLongRule, MethodTooLongRule];
 
     public override void Initialize(AnalysisContext context)
     {
         context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
         context.EnableConcurrentExecution();
-        context.RegisterSyntaxNodeAction(AnalyzeNode, SyntaxKind.ClassDeclaration, SyntaxKind.MethodDeclaration);
+        context.RegisterSyntaxNodeAction(CodeSizeAnalyzeNode, SyntaxKind.ClassDeclaration, SyntaxKind.MethodDeclaration);
     }
 
-    private void AnalyzeNode(SyntaxNodeAnalysisContext context)
+    // ReSharper disable once InconsistentNaming
+    private static void CodeSizeAnalyzeNode(SyntaxNodeAnalysisContext context)
     {
         var config = context.Options.AnalyzerConfigOptionsProvider.GetOptions(context.Node.SyntaxTree);
         

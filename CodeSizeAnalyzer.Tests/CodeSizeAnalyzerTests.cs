@@ -55,7 +55,7 @@ public class CodeSizeAnalyzerTests
                             }
                             """;
         
-        var expected = Verifier.Diagnostic("MethodTooLongRule")
+        var expected = Verifier.Diagnostic("CSA2002")
             .WithLocation(3, 17)
             .WithArguments(["MyLongMethod", "MyLongClass"]);
         
@@ -102,7 +102,7 @@ public class CodeSizeAnalyzerTests
             
         classText = classText.Replace("MMM", string.Join(Environment.NewLine, methods));
         
-        var expected = Verifier.Diagnostic("ClassTooLongRule")
+        var expected = Verifier.Diagnostic("CSA2001")
             .WithLocation(1, 14)
             .WithArguments(["MyLongClass"]);
         
